@@ -1,0 +1,44 @@
+	- Password: vATLxou9u48jR4FN
+
+[x] npm package initialization
+[x] Create directory structure
+	- public
+	- controllers
+	- db / config?
+	- middlewares
+	- models
+	- routes
+		- app.js
+		- index.js
+		- server.js
+[x] Create NPM preoject adn dependancies
+	- Dependancies
+		- express
+		- mongoose
+		- body-parser
+		- bcryptjs
+		- dotenv
+		- validator
+		- slugify
+		- config
+	- Dev dependancies ( npm i -D )
+		- nodemon 
+[.] Create Express server file
+[.] Create Home page
+[.] Create login page with route
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
+[.]
