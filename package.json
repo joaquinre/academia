@@ -21,4 +21,8 @@
     "mongoose": "^6.3.0",
     "slugify": "^1.6.5",
     "validator": "^13.7.0"
- 
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
