@@ -4,10 +4,11 @@
 [x] Create directory structure
 	- public
 	- controllers
-	- db / config?
+	- config
 	- middlewares
 	- models
 	- routes
+	- resources
 		- app.js
 		- index.js
 		- server.js
@@ -23,11 +24,16 @@
 		- config
 	- Dev dependancies ( npm i -D )
 		- nodemon 
+		- laravel-mix
 [.] Create Express server file
+[.] Git setup and first commit
 [.] Create Home page
+[.] Create coruses model and put dummy data
 [.] Create login page with route
-[.]
-[.]
+[.] Create register page with route
+[.] Build register crud
+	- dependancies express-flash express-session cookie-parser
+	- database connection
 [.]
 [.]
 [.]
