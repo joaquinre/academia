@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "app": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +26,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.43",
     "nodemon": "^2.0.15"
   }
