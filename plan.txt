@@ -25,10 +25,10 @@
 	- Dev dependancies ( npm i -D )
 		- nodemon 
 		- laravel-mix
-[.] Create Express server file
-[.] Git setup and first commit
-[.] Create Home page
-[.] Create coruses model and put dummy data
+[x] Create Express app file
+[x] Git setup and first commit
+[x] Create Home page
+[.] Create courses model and put dummy data
 [.] Create login page with route
 [.] Create register page with route
 [.] Build register crud

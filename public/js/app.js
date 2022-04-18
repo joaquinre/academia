@@ -7,7 +7,31 @@
   \*****************************/
 /***/ (() => {
 
-console.log('hello from js');
+var showMenu = function showMenu(toggleId, navId) {
+  var toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('bx-x');
+    });
+  }
+};
+
+showMenu('header-toggle', 'nav-menu');
+var navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+  navLink.forEach(function (n) {
+    return n.classList.remove('active');
+  });
+  this.classList.add('active');
+}
+
+navLink.forEach(function (n) {
+  return n.addEventListener('click', linkAction);
+});
 
 /***/ }),
 
