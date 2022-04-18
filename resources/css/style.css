@@ -140,6 +140,10 @@ h2 {
   gap: var(--gap, 1rem);
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+}
 
 /* utility */
 
@@ -152,22 +156,14 @@ h2 {
 .padding-48 {
   padding: 3rem;
 }
-.padding-top-24 {
-  padding: 1.5 1.5 0;
-}
-
-.margin-12 {
-  margin: 0.75rem;
-}
-.margin-24 {
-  margin: 1.5rem;
-}
 
 .marginTop-24 {
   margin-top: 1.5rem;
+  margin-right: 1.5rem;
 }
 .marginTop-48 {
   margin-top: 3rem;
+  margin-right: 1.5rem;
 }
 
 .text-neutral-800 {
@@ -348,23 +344,25 @@ h2 {
 }
 
 .progress__line {
-  margin: 0;
-  bottom: 0.75rem;
+  margin-right: -8px;
+  margin: -5px;
+  /* bottom: 0.75rem; */
   width: 7rem;
   height: 0.5em;
   color: red;
   background-color: red;
   border-width: 0;
-  position: absolute;
+  position: fixed;
+  border-radius: 1px 5px;
+
 }
 
-/* .card { */
+.card {
  /* for demo  */
   /* max-width: 30rem; */
-/* } */
+}
 .card__progress {
-  position: relative;
-  /* width: max-content; */
+  width: max-content;
 }
 
 .card__cursos {
@@ -374,4 +372,3 @@ h2 {
 .card__academy {
   width: max-content;
 }
-
