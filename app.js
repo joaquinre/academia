@@ -13,16 +13,17 @@ const app = express()
 // Assets
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-	res.render('home')
-})
 
 // set Template engine
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs')
 
-const port = process.env.PORT || 8082
+// routes
 
+require('./routes/routes')(app)
+
+
+const port = process.env.PORT || 8082
 app.listen(port, () => 
 	console.log(`Server running on port ${port}`));
