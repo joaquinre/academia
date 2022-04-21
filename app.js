@@ -1,12 +1,14 @@
 const express = require('express')
 // const connectDB = require('./app/config/db')
-
 const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
+const bodyParser = require('body-parser')
+
+const jsonParser = bodyParser.json()
 
 const app = express()
-
+const flash = require('express-flash')
 const mongoose = require('mongoose')
 
 // Connect Database
@@ -23,7 +25,7 @@ mongoose
 
 // Assets
 app.use(express.static('public'))
-
+app.use(express.urlencoded({ extended: false }))
 
 // set Template engine
 app.use(expressLayout)
@@ -32,7 +34,7 @@ app.set('view engine', 'ejs')
 
 // routes
 
-require('./routes/routes')(app)
+require('./routes/routes')(app, jsonParser)
 
 
 const port = process.env.PORT || 8082

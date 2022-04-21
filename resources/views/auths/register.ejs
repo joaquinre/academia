@@ -1,9 +1,10 @@
-<form class="bg-neutral-100 padding-24">
+<form action="/register" method="POST" class="bg-neutral-100 padding-24">
 	<h1>Register Here</h1>
 	<hr>
-		<input type="text" placeholder="Enter Email" name="email">
-		<input type="password" placeholder="Enter Password" name="pwd">
-		<input type="password" placeholder="Confirm Password" name="confirm">
+		<input name="email" type="text" placeholder="Enter Email">
+		<input name="fullname" type="text" placeholder="Enter Name" maxlength="15">
+		<input name="phoneNumber" type="number" placeholder="Enter Phone Number" maxlength="10">
+		<input name="password" type="password" placeholder="Enter Password">
 	<hr>
 	<button type="submit" class="registerbtn"><strong>Register</strong></button>
 	</div>
