@@ -7,8 +7,19 @@ const expressLayout = require('express-ejs-layouts')
 
 const app = express()
 
+const mongoose = require('mongoose')
+
 // Connect Database
-// connectDB();
+mongoose
+	.connect(
+		"mongodb+srv://joaquinre123:vATLxou9u48jR4FN@cluster0.6apjs.mongodb.net/Academia?retryWrites=true&w=majority", { useNewUrlParser: true }
+	)
+	.then(() => {
+		console.log('Database connected..');
+	})
+	.catch((err) => {
+		console.error(err);
+	})
 
 // Assets
 app.use(express.static('public'))

@@ -1,4 +1,4 @@
 {
 "mongoURI":
-	"mongodb+srv://joaquinre123:vATLxou9u48jR4FN@cluster0.6apjs.mongodb.net/academia?retryWrites=true&w=majority"
+	"mongodb+srv://joaquinre123:vATLxou9u48jR4FN@cluster0.6apjs.mongodb.net/Academia?retryWrites=true&w=majority"
 }

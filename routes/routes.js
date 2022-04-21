@@ -1,15 +1,12 @@
+const authController = require("../app/controllers/authController")
+const homeController = require("../app/controllers/homeController")
+
 function initRoutes(app) {
-	app.get('/', (req, res) => {
-		res.render('home')
-	})	
+	app.get('/', homeController().index)	
 
-	app.get('/login', (req, res) => {
-		res.render('auths/login')
-	})
+	app.get('/login', authController().login)
 
-	app.get('/register', (req, res) => {
-		res.render('auths/register')
-	})
+	app.get('/register', authController().register)
 }
 
 module.exports = initRoutes
