@@ -20,7 +20,12 @@
 					<div class="nav__menu">
 						<ul class="nav__list fw-bold">
 							<li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
-							<li class="nav__item"><a href="/login" class="nav__link">Login</a></li>
+							<% if (user) { %>
+								<li class="nav__item"><a href="/login" class="nav__link">Profile</a></li>
+								<li class="nav__item"><a href="/login" class="nav__link">Logout</a></li>
+							<% } else { %>
+								<li class="nav__item"><a href="/login" class="nav__link">Login</a></li>
+							<% } %>
 							<li class="nav__item"><a href="#" class="nav__link">Courses</a></li>
 							<li class="nav__item"><a href="#" class="nav__link">Schools</a></li>
 						</ul>

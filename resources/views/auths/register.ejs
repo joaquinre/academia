@@ -1,9 +1,12 @@
 <form action="/register" method="POST" class="bg-neutral-100 padding-24">
 	<h1>Register Here</h1>
+	<% if(messages.error) { %>
+	<span class="alert"><%= messages.error%></span>
+	<% } %>
 	<hr>
-		<input name="email" type="text" placeholder="Enter Email">
-		<input name="fullname" type="text" placeholder="Enter Name" maxlength="15">
-		<input name="phoneNumber" type="number" placeholder="Enter Phone Number" maxlength="10">
+		<input value="<%= messages.email %>" name="email" type="email" placeholder="Enter Email">
+		<input value="<%= messages.name %>" name="fullname" type="text" placeholder="Enter Name" maxlength="22">
+		<input name="phoneNumber" type="number" placeholder="Enter Phone Number">
 		<input name="password" type="password" placeholder="Enter Password">
 	<hr>
 	<button type="submit" class="registerbtn"><strong>Register</strong></button>

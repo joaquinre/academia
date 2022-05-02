@@ -1,8 +1,11 @@
-<form class="bg-neutral-100 padding-24">
+<form action="/login" method="POST" class="bg-neutral-100 padding-24">
 	<h1>Login Here</h1>
+	<% if(messages.error) { %>
+	<span class="alert"><%= messages.error%></span>
+	<% } %>
 	<hr>
 		<input type="text" placeholder="Enter Email" name="email">
-		<input type="password" placeholder="Enter Password" name="pwd">
+		<input type="password" placeholder="Enter Password" name="password">
 	<hr>
 	<button type="submit" class="registerbtn"><strong>Login</strong></button>
 	</div>
