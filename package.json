@@ -27,6 +27,7 @@
     "formidable": "^2.0.1",
     "fs": "0.0.1-security",
     "get-video-duration": "^4.0.0",
+    "handbrake-js": "^6.0.0",
     "mongoose": "^6.3.0",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",

@@ -1,34 +1,35 @@
- <form action="/uploadVideo" method="post" id="contact-form" class="contact-form mt-30 mb-30" enctype="multipart/form-data">
+ <form action="/admin/uploads" method="post" id="contact-form" class="contact-form mt-30 mb-30" enctype="multipart/form-data">
                 <div class="contact-name">
                     <label for="name"> Title <abbr title="required" class="required">*</abbr></label>
-                    <input name="post_title" id="name" type="text">
+                    <input name="video_title" id="name" type="text">
                 </div>
                 <br>
 
                 <label for="name"> Select Video </label>
-				<input  type="file" name="video" accept="video/*" required>
+				<input  type="file" name="video" accept="video/*" >
 				<br>
 				<label for="name"> Select Thumbnail </label>
-				<input  type="file" name="thumbnail" accept="image/*" required>
+				<input  type="file" name="thumbnail" accept="image/*" >
 
                 <div class="contact-message">
                     <label for="message">Description <abbr title="required" class="required">*</abbr></label>
-                    <textarea name="description" rows="2" required placeholder="Write your description here..."></textarea>
+                    <textarea name="video_description" rows="2" required placeholder="Write your description here..."></textarea>
                 </div>
 
 				<div class="contact-message">
                     <label for="message">Tags <abbr title="required" class="required">*</abbr></label>
-                    <textarea id="message" name="post_description" rows="2" required placeholder="Write your tags"></textarea>
+                    <textarea id="message" name="video_tags" rows="2" required placeholder="Write your tags"></textarea>
                 </div>
 				
                 <div class="contact-subject">
                     <label for="name" >Category <abbr title="required" class="required">*</abbr></label>
-                        <select for="" name="post_category">
+                        <select for="" name="video_category">
                         <option selected disabled>Select category </option>
                           <option value="">
+							  mecanica
                           </option>
                         </select>
                 </div>
                 <div id="msg" class="message"></div>
-                    <button type="submit" name="insert"  class="btn btn-lg btn-color btn-button" >Upload Video</button>
+                    <button type="submit"  class="btn btn-lg btn-color btn-button" >Upload Video</button>
             </form> 

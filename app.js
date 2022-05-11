@@ -15,9 +15,6 @@ const MongoDbStore = require('connect-mongo')(session)
 const mongoose = require('mongoose')
 const passport = require('passport')
 
-const formidable = require('formidable')
-const fileSystem = require('fs')
-const { getVideoDurationInSeconds } = require('get-video-duration')
 
 // Connect Database
 mongoose
@@ -31,29 +28,24 @@ mongoose
 	.catch((err) => {
 		console.error(err);
 	})
+const connection = mongoose.connection
 
-// let mongoStore = new MongoDbStore({
-// 	mongooseConnection: connection,
-// 	collection: 'sessions'
-// })	
+let mongoStore = new MongoDbStore({
+	mongooseConnection: connection,
+	collection: 'sessions'
+})	
 
 // session config
 app.use(session({
 	secret: process.env.COOKIE_SECRET,
 	resave: false,
-	// store: mongoStore,
+	store: mongoStore,
 	saveUninitialized: false,
 	cookie: { maxAge: 1000 * 60 * 60 * 24 } // 24 hours
 }))
 
 // return user's documents
-function getUser(id, callback) {
-	database.collection("users").findOne({
-		"_id": ObjectId(id)
-	}, function(error, user) {
-		callback(user)	
-	})	
-}
+
 
 // passport config
 const passportInit = require('./app/config/passport')
@@ -82,7 +74,7 @@ app.set('view engine', 'ejs')
 
 // routes
 
-require('./routes/routes')(app, jsonParser)
+require('./routes/routes')(app)
 
 
 const port = process.env.PORT || 8082

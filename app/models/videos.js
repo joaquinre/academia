@@ -1,22 +1,21 @@
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const videosSchema = new Schema({
-	userId: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: 'User',
-		required: true
-	},
-	filePath: { type: String, required: true},
-	thumbnail: { type: String, required: true, default: 'foto.png'},
-	title: { type: String, required: true},
-	description: { type: String, required: true},
-	tags: { type: String, required: false},
-	category: { type: String, required: true},
-	minutes: { type: Int, default: 0},
-	seconds: { type: Int, default: 0},
-	watch: { type: Int, default: 0},
-	views: { type: Int, default: 0},
-	playlits: { type: String, required: false},
+	userId: { type: mongoose.SchemaTypes.ObjectId, ref: 'User' },
+	// filePath: { type: String, required: true},
+	thumbnail: { type: String,},
+	title: { type: String,},
+	description: { type: String,},
+	tags: { type: String,},
+	category: { type: String,},
+	transcoding: { type: Boolean },
+	progress: { type: Number },
+	minutes: { type: Number, default: 0},
+	seconds: { type: Number, default: 0},
+	watch: { type: Number, default: 0},
+	views: { type: Number, default: 0},
+	playlist: { type: String,},
 }, { timestamps: true })
 
-module.exports = mongoose.model('User', videosSchema)
+module.exports = mongoose.model('Videos', videosSchema)

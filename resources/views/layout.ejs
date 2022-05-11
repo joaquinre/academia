@@ -22,7 +22,12 @@
 							<li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
 							<% if (user) { %>
 								<li class="nav__item"><a href="/login" class="nav__link">Profile</a></li>
-								<li class="nav__item"><a href="/login" class="nav__link">Logout</a></li>
+								<li class="nav__item"><a href="/admin/uploads" class="nav__link">Upload</a></li>
+								<form id="logout" action="/logout" method="post">
+									<li class="nav__item">
+										<a onclick="document.getElementById('logout').submit()" href="#" class="nav__link">Logout</a>
+									</li>
+								</form>
 							<% } else { %>
 								<li class="nav__item"><a href="/login" class="nav__link">Login</a></li>
 							<% } %>
